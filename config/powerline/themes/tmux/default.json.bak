@@ -22,7 +22,7 @@
 				"name" : "mail",
 				"args": {
 					"username": "ryan.kachik@answers.com",
-					"password": "$POWERLINE_EMAIL_PASSWORD"
+					"password": "Sub:way1"
 				}
 			},
 			{
