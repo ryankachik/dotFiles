@@ -1,0 +1,43 @@
+{
+	"segments": {
+		"left" : [
+			{
+				"function": "powerline.segments.common.vcs.branch",
+				"args" : {
+					"status_colors" : true,
+					"ignore_statuses" : ["u"]
+				}
+			}
+		],
+		"right": [
+			{
+        		"function": "powerline.segments.common.players.spotify_apple_script",
+        		"name": "player"
+			},
+			{
+				"function": "powerline.segments.common.time.date"
+			},
+			{
+				"function": "powerline.segments.common.mail.email_imap_alert",
+				"args": {
+					"username": "ryan.kachik@answers.com",
+					"password": "Sub:way1"
+				}
+			},
+			{
+				"function": "powerline.segments.common.time.date",
+				"name": "time",
+				"args": {
+					"format": "%H:%M",
+					"istime": true
+				}
+			},
+			{
+				"function": "powerline.segments.common.bat.battery"
+			},
+			{
+				"function": "powerline.segments.common.net.hostname"
+			}
+		]
+	}
+}
