@@ -1,0 +1,123 @@
+{
+	"common": {
+		"term_truecolor": false
+	},
+	"ext": {
+		"ipython": {
+			"colorscheme": "default",
+			"theme": "in",
+			"local_themes": {
+				"rewrite": "rewrite",
+				"out": "out",
+				"in2": "in2"
+			}
+		},
+		"shell": {
+			"colorscheme": "default",
+			"theme": "default",
+			"local_themes": {
+				"continuation": "continuation",
+				"select": "select"
+			},
+			"segments": {
+				"left": [
+					{
+						"function": "powerline.segments.shell.mode"
+					},
+					{
+						"function": "powerline.segments.common.net.hostname",
+						"priority": 10
+					},
+					{
+						"function": "powerline.segments.common.env.user",
+						"priority": 30
+					},
+					{
+						"function": "powerline.segments.common.env.virtualenv",
+						"priority": 50
+					},
+					{
+						"function": "powerline.segments.shell.cwd",
+						"priority": 10,
+						"args" : {
+							"dir_limit_depth": 3
+						}
+					},
+					{
+						"function": "powerline.segments.common.vcs.branch",
+						"args" : {
+							"status_colors" : true,
+							"ignore_statuses" : ["u"]
+						}
+					}
+				]
+			}
+		},
+		"tmux": {
+			"colorscheme": "default",
+			"theme": "default",
+			"segments": {
+				"left" : [
+					{
+						"function": "powerline.segments.common.vcs.branch",
+						"args" : {
+							"status_colors" : true,
+							"ignore_statuses" : ["u"]
+						}
+					}
+				],
+				"right": [
+					{
+		        		"function": "powerline.segments.common.players.spotify_apple_script",
+		        		"name": "player"
+					},
+					{
+						"function": "powerline.segments.common.time.date"
+					},
+					{
+						"function": "powerline.segments.common.mail.email_imap_alert",
+						"args": {
+							"username": "ryan.kachik@answers.com",
+							"password": "Sub:way1"
+						}
+					},
+					{
+						"function": "powerline.segments.common.time.date",
+						"name": "time",
+						"args": {
+							"format": "%H:%M",
+							"istime": true
+						}
+					},
+					{
+						"function": "powerline.segments.common.bat.battery"
+					},
+					{
+						"function": "powerline.segments.common.net.hostname"
+					}
+				]
+			}
+		},
+		"vim": {
+			"colorscheme": "default",
+			"theme": "default",
+			"local_themes": {
+				"__tabline__": "tabline",
+
+				"cmdwin": "cmdwin",
+				"help": "help",
+				"quickfix": "quickfix",
+
+				"powerline.matchers.vim.plugin.nerdtree.nerdtree": "plugin_nerdtree",
+				"powerline.matchers.vim.plugin.ctrlp.ctrlp": "plugin_ctrlp",
+				"powerline.matchers.vim.plugin.commandt.commandt": "plugin_commandt",
+				"powerline.matchers.vim.plugin.gundo.gundo": "plugin_gundo",
+				"powerline.matchers.vim.plugin.gundo.gundo_preview": "plugin_gundo-preview"
+			}
+		},
+		"wm": {
+			"colorscheme": "default",
+			"theme": "default"
+		}
+	}
+}
