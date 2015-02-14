@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc vimrc vim config tmux.conf kdiff3rc"    # list of files/folders to symlink in homedir
+files="bashrc vimrc vim config tmux.conf kdiff3rc"    # list of files/folders to symlink in homedir, ignore bash_profile, that should contain system specific vars/aliases
 
 ##########
 
@@ -29,3 +29,9 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+#dont want to share un/pw on github, so find and replace
+if [ -f ~/.config/powerline/themes/tmux/default.json ]; then
+    sed -i.bak s/\$POWERLINE_EMAIL_ADDRESS/$POWERLINE_EMAIL_ADDRESS/g ~/.config/powerline/themes/tmux/default.json
+    sed -i.bak s/\$POWERLINE_EMAIL_PASSWORD/$POWERLINE_EMAIL_PASSWORD/g ~/.config/powerline/themes/tmux/default.json
+fi
